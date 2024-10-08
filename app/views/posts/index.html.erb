@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Posts"%>
+
+<% content_for :head do %>
+  <meta data-test = "test">
+<% end %>
+
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <%# <%= @posts.to_json %> 
+
+  <% @posts.each do |post| %>
+
+    <%# <%= post %>
+    <%# <%= post.to_json %> 
+
+    <%= render post %>
+
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>

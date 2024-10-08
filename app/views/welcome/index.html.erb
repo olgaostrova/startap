@@ -1,0 +1,7 @@
+<% colors = [['красный', 'red'], ['синий', 'blue'], ['голубой', 'cyan']] %>
+
+<% colors.each do |tone|%>
+  <%= render 'counter', color: tone %>
+<% end %>
+
+<h1>Выбирай себе любой</h1>
